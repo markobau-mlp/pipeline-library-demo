@@ -11,7 +11,7 @@ pipeline {
 
         stage('Manda e-mail') {
           steps {
-            mail(subject: 'Stai attento!', body: 'Sei sicuro di star facendo un buon lavoro?', from: 'marco.leonardo.porro@accenture.com', to: 'markobau.mlp@outlook.it')
+            emailext(subject: 'Stai attento!', body: 'Sei sicuro di star facendo un buon lavoro?', attachLog: true, from: 'marco.leonardo.porro@accenture.com', to: 'markobau.mlp@outlook.it')
           }
         }
 
